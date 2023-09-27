@@ -19,7 +19,7 @@ const BasicInfo = () => {
               {key.charAt(0).toUpperCase() + key.slice(1)}:
             </span>
             <span
-              onClick={() => urlValue && Router.push(value)}
+              onClick={() => urlValue && window.open(value, "_blank")}
               className={`w-full ${
                 urlValue && "hover:text-sky-500 cursor-pointer"
               }`}
