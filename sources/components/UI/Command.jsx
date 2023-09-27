@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaCopy } from "react-icons/fa";
 
-const Command = ({ cmd }) => {
+const Command = ({ cmd, className }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const handleCopy = () => {
@@ -11,12 +11,13 @@ const Command = ({ cmd }) => {
   };
 
   return (
-    <div className="sticky bottom-0 mt-3 text-emerald-400 flex items-center">
-      <span className="mr-1">command:</span> <span className="">{cmd}</span>
+    <div className={`text-emerald-400 flex items-center ${className}`}>
+      <span className="mr-1 text-[#cd6088]">command:</span>{" "}
+      <span className="">{cmd}</span>
       <button onClick={handleCopy} className="mx-2">
         <FaCopy />
       </button>
-      {isCopied && <span className="text-green-500">Copied!</span>}
+      {isCopied && <span>Copied!</span>}
     </div>
   );
 };

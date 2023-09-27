@@ -10,7 +10,7 @@ const Layout = ({ children }) => {
     <DataProvider>
       <div style={font.style} className="">
         <Navbar />
-        <div className="p-5">{children}</div>
+        <div className="p-5 overflow-x-auto">{children}</div>
         <Terminal />
       </div>
     </DataProvider>

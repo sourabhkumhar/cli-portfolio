@@ -6,7 +6,7 @@ export const Data = createContext();
 const DataProvider = ({ children }) => {
   const [cmdHistory, setCmdHistory] = useState([]);
   const [expand, setExpand] = useState(250);
-  const [output, setOutput] = useState(false);
+  const [output, setOutput] = useState("");
 
   const handleTerminalHeight = (e) => {
     setExpand((prev) => !prev);
@@ -23,15 +23,31 @@ const DataProvider = ({ children }) => {
   };
 
   const executeCommand = (cmd) => {
-    if (cmd === "initialize getting data") {
-      Router.push("/sourabhkumhar");
+    if (cmd === "init profile") {
+      Router.push("/portfolio");
+      setOutput("");
       return;
     }
+    if (cmd === "reset") {
+      Router.push("/");
+      setOutput("");
+      return;
+    }
+    if (cmd === "reload") {
+      Router.reload();
+      return;
+    }
+    if (cmd === "cls" || cmd === "clear") {
+      setCmdHistory([]);
+      return;
+    }
+
+    Router.asPath === "/portfolio" && setOutput(cmd);
   };
 
   return (
     <Data.Provider
-      value={{ cmdHistory, callCommand, expand, handleTerminalHeight }}
+      value={{ cmdHistory, callCommand, expand, handleTerminalHeight, output }}
     >
       {children}
     </Data.Provider>
