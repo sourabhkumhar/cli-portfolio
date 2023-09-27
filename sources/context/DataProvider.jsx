@@ -5,7 +5,7 @@ export const Data = createContext();
 
 const DataProvider = ({ children }) => {
   const [cmdHistory, setCmdHistory] = useState([]);
-  const [expand, setExpand] = useState(250);
+  const [expand, setExpand] = useState(true);
   const [output, setOutput] = useState("");
 
   const handleTerminalHeight = (e) => {

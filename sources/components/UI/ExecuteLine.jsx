@@ -7,6 +7,7 @@ const ExecuteLine = ({ delay = 0, children, text, ...props }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ delay: delay, type: "tween", duration: 0 }}
+      viewport={{ once: true }}
       {...props}
     >
       {text || children}
