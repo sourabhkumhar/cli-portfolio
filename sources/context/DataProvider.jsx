@@ -1,3 +1,4 @@
+import Router from "next/router";
 import { createContext, useState } from "react";
 
 export const Data = createContext();
@@ -5,7 +6,6 @@ export const Data = createContext();
 const DataProvider = ({ children }) => {
   const [cmdHistory, setCmdHistory] = useState([]);
   const [expand, setExpand] = useState(250);
-  const [isStarted, setStarted] = useState(false);
   const [output, setOutput] = useState(false);
 
   const handleTerminalHeight = (e) => {
@@ -18,6 +18,15 @@ const DataProvider = ({ children }) => {
       temp.push(cmd);
       return temp;
     });
+
+    executeCommand(cmd);
+  };
+
+  const executeCommand = (cmd) => {
+    if (cmd === "initialize getting data") {
+      Router.push("/sourabhkumhar");
+      return;
+    }
   };
 
   return (
