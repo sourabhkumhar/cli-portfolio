@@ -7,6 +7,7 @@ import Router from "next/router";
 const BasicInfo = () => {
   return (
     <div className="flex flex-col gap-1">
+      <div>Basic Details:</div>
       {Object.entries(basicDetails).map(([key, value], ind) => {
         const urlValue = isURL(value);
         return (

@@ -8,8 +8,10 @@ const DataProvider = ({ children }) => {
   const [expand, setExpand] = useState(true);
   const [output, setOutput] = useState("");
 
-  const handleTerminalHeight = (e) => {
-    setExpand((prev) => !prev);
+  const handleTerminalHeight = (val) => {
+    setExpand((prev) => {
+      return val === undefined ? !prev : val;
+    });
   };
 
   const callCommand = (cmd) => {
@@ -35,6 +37,10 @@ const DataProvider = ({ children }) => {
     }
     if (cmd === "reload") {
       Router.reload();
+      return;
+    }
+    if (cmd === "open cmd list") {
+      window.open("/cmds", "_blank");
       return;
     }
     if (cmd === "cls" || cmd === "clear") {

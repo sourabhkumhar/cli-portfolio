@@ -5,7 +5,9 @@ const Home = () => {
     <div>
       <div>
         Hello, Welcome to my PORTFOLIO! <br />
-        If you want to initialize getting data, use this command in terminal.
+        If you want access portfolio, use below command.
+        <br />
+        Check cmd list to view all command...
       </div>
 
       <Command className="mt-5" cmd="init profile" />

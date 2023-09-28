@@ -58,4 +58,16 @@ const projects = [
   },
 ];
 
-export { basicDetails, projects };
+const skills = [
+  "Next.js",
+  "React.js",
+  "JavaScript",
+  "HTML",
+  "CSS",
+  "Tailwind CSS",
+  "Bootstrap",
+  "Node.js",
+  "MongoDB",
+];
+
+export { basicDetails, projects, skills };

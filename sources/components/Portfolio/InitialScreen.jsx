@@ -20,7 +20,7 @@ const InitialScreen = () => {
           description="Get basic details like, name, address, occupation, etc."
         />
         <CommandBox
-          cmd="list projects link"
+          cmd="list projects"
           description="Get list of links of deployed projects which are created by me."
         />
         <CommandBox

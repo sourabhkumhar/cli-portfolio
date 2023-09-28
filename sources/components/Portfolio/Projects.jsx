@@ -5,10 +5,10 @@ import Router from "next/router";
 const curlyOpen = "{";
 const curlyClose = "}";
 
-const Projects = () => {
+const Projects = ({ showDescription }) => {
   return (
-    <div className="flex flex-col gap-1 text-[#d57575]">
-      [
+    <div className="flex flex-col gap-1">
+      <div>Prjects Array{showDescription && <> with Descriptions</>}:</div>[
       {projects.map((elem, ind) => {
         return (
           <>
@@ -43,6 +43,17 @@ const Projects = () => {
                 &#34;{elem.github}&#34;
               </span>
               ,
+              {showDescription && (
+                <>
+                  <br />
+                  &emsp;
+                  <span className="text-white">&#34;description&#34;: </span>
+                  <span className="text-[#ffad8d]">
+                    &#34;{elem.description}&#34;
+                  </span>
+                  ,
+                </>
+              )}
               <br />
               {curlyClose},
             </ExecuteLine>

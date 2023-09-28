@@ -13,10 +13,13 @@ const Terminal = () => {
       style={{ height: expand ? 250 : 37 }}
     >
       <div className="flex justify-between">
-        <div className="bg-neutral-600 rounded-md px-1 text-sm cursor-pointer hover:bg-neutral-700 duration-300">
+        <div
+          className="bg-neutral-600 rounded-md px-1 text-sm cursor-pointer hover:bg-neutral-700 duration-300"
+          onClick={() => window.open("/cmds", "_blank")}
+        >
           cmd list
         </div>
-        <div onClick={handleTerminalHeight}>
+        <div onClick={() => handleTerminalHeight()}>
           {expand ? (
             <IoClose size={22} color="white" cursor="pointer" />
           ) : (
