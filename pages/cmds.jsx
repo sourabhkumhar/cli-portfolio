@@ -25,7 +25,7 @@ const Page = () => {
     <>
       <div className="flex items-center justify-between gap-3">
         List of commands:
-        <div onClick={() => window.close()} className="cursor-pointer p-1">
+        <div onClick={() => window.close()} className="cursor-pointer">
           close
         </div>
       </div>

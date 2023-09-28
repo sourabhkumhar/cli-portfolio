@@ -7,7 +7,6 @@ html,
 body {
     background-color: #1E1E1E;
     color: white;
-    cursor: url('/cursor.png'), auto;
 }
 
 ::-webkit-scrollbar {
@@ -24,8 +23,4 @@ body {
 
 ::-webkit-scrollbar-thumb:active {
     background-color: #555;
-}
-
-::selection {
-    background-color: #313131;
 }
