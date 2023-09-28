@@ -11,8 +11,8 @@ const Command = ({ cmd, className }) => {
   };
 
   return (
-    <div className={`text-emerald-400 flex items-center ${className}`}>
-      <span className="mr-1 text-[#cd6088]">command:</span>{" "}
+    <div className={`text-[#6adf93] flex items-center ${className}`}>
+      <span className="mr-1 text-[#e696b3]">command:</span>{" "}
       <span className="">{cmd}</span>
       <button onClick={handleCopy} className="mx-2">
         <FaCopy />

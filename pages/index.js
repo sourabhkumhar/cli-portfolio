@@ -4,10 +4,12 @@ const Home = () => {
   return (
     <div>
       <div>
-        Hello, Welcome to my PORTFOLIO! <br />
-        If you want access portfolio, use below command.
+        Hello and welcome to my portfolio!
         <br />
-        Check cmd list to view all command...
+        To access the portfolio, please use the command below.
+        <br />
+        You can also view the list of available commands by checking the command
+        list. <span className="text-[#6adf93]">Enjoy exploring!</span>
       </div>
 
       <Command className="mt-5" cmd="init profile" />

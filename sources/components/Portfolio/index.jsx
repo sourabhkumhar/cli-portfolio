@@ -6,6 +6,7 @@ import CommandBox from "../UI/CommandBox";
 import Error from "./Error";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Experience from "./Experience";
 
 const Portfolio = () => {
   const { output } = useContext(Data);
@@ -21,8 +22,10 @@ const Portfolio = () => {
       return <Projects />;
     case "list projects --description":
       return <Projects showDescription />;
-    case "retrive skills":
+    case "retrieve skills": 
       return <Skills />;
+    case "retrieve experience":
+      return <Experience />;
     default:
       return <Error message="Invalid command!" />;
   }

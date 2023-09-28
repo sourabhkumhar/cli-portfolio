@@ -28,14 +28,16 @@ const Terminal = () => {
         </div>
       </div>
 
-      <div className="px-2 mt-3 text-neutral-400 flex flex-col gap-1">
-        <div className="max-h-[130px] overflow-x-hidden overflow-scroll">
-          {cmdHistory.map((elem, i) => {
-            return <PastCmd key={i} cmd={elem} />;
-          })}
+      {expand && (
+        <div className="px-2 mt-3 text-neutral-400 flex flex-col gap-1">
+          <div className="max-h-[130px] overflow-x-hidden overflow-scroll">
+            {cmdHistory.map((elem, i) => {
+              return <PastCmd key={i} cmd={elem} />;
+            })}
+          </div>
+          <TerminalInput />
         </div>
-        <TerminalInput />
-      </div>
+      )}
     </div>
   );
 };

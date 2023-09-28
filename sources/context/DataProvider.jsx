@@ -35,6 +35,14 @@ const DataProvider = ({ children }) => {
       setOutput("");
       return;
     }
+    if (cmd === "redirect --gui") {
+      Router.push("https://sourabhportfolio.vercel.app");
+      return;
+    }
+    if (cmd === "minimize") {
+      handleTerminalHeight(false);
+      return;
+    }
     if (cmd === "reload") {
       Router.reload();
       return;
@@ -45,6 +53,22 @@ const DataProvider = ({ children }) => {
     }
     if (cmd === "cls" || cmd === "clear") {
       setCmdHistory([]);
+      return;
+    }
+    if (cmd === "contact --whatsapp") {
+      window.open("https://wa.me/918560842664", "_blank");
+      return;
+    }
+    if (cmd === "contact --mail") {
+      window.open("mailto:mr.sourabhkumhar@gmail.com", "_blank");
+      return;
+    }
+    if (cmd === "visit --linkedin") {
+      window.open("https://linkedin.com/in/sourabhkumhar", "_blank");
+      return;
+    }
+    if (cmd === "visit --github") {
+      window.open("https://github.com/sourabhkumhar", "_blank");
       return;
     }
 

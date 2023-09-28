@@ -70,4 +70,97 @@ const skills = [
   "MongoDB",
 ];
 
-export { basicDetails, projects, skills };
+const experiences = [
+  {
+    designation: "React.js Developer",
+    company_name: "Indivue Technologies",
+    date: "October 2022 - March 2023",
+    points: [
+      "Developing and maintaining frontend of web applications using React.js and MUI and other related technologies.",
+      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+      "Participating in code reviews and providing/taking constructive feedback to/from other developers.",
+    ],
+  },
+];
+
+const profileCommands = [
+  {
+    cmd: "init profile",
+    description:
+      "Start accessing my profile from the home page. This is an essential command to get started.",
+  },
+  {
+    cmd: "redirect --gui",
+    description:
+      "If you prefer a Graphical User Interface (GUI) over the Command Line Interface (CLI), use this command to switch to the GUI.",
+  },
+  {
+    cmd: "get basic info",
+    description:
+      "Retrieve my basic details such as my name, address, occupation, and more.",
+  },
+  {
+    cmd: "list projects",
+    description:
+      "View a list of links to deployed projects that were created by me.",
+  },
+  {
+    cmd: "list projects --description",
+    description: "List deployed projects along with their descriptions.",
+  },
+  {
+    cmd: "retrieve skills",
+    description: "Retrieve a comprehensive list of my skills and expertise.",
+  },
+  {
+    cmd: "retrieve experience",
+    description:
+      "Access information about my past and current work experiences.",
+  },
+  {
+    cmd: "contact --whatsapp",
+    description: "Initiate a conversation with me on WhatsApp.",
+  },
+  {
+    cmd: "contact --mail",
+    description: "Send an email directly to my email address.",
+  },
+  {
+    cmd: "visit --linkedin",
+    description: "Visit my LinkedIn profile for professional networking.",
+  },
+  {
+    cmd: "visit --github",
+    description: "Explore my GitHub profile to see my code contributions.",
+  },
+];
+
+const accessCommand = [
+  {
+    cmd: "reset",
+    description: "Reset profile access and return to the home page.",
+  },
+  {
+    cmd: "minimize",
+    description: "Minimize the terminal for a clutter-free view.",
+  },
+  {
+    cmd: "reload",
+    description: "Reload the page to refresh content or settings.",
+  },
+  {
+    cmd: "cls",
+    description:
+      "Clear the command history to start fresh. You can also use < clear >.",
+  },
+];
+
+export {
+  basicDetails,
+  projects,
+  skills,
+  experiences,
+  profileCommands,
+  accessCommand,
+};
